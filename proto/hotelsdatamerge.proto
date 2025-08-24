@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package proto;
+
+import "proto/google/api/annotations.proto";
+
+option go_package = "hotelsDataMerge/proto";
+
+service HotelDataMerge {
+  rpc GetHotels(GetHotelsRequest) returns (GetHotelsResponse) {
+    option idempotency_level = NO_SIDE_EFFECTS;
+    option (google.api.http) = {
+      get: "/v1/hotels"
+    };
+  }
+}
+
+message GetHotelsRequest {
+  repeated string hotelIDs = 1;
+  uint64 destinationId = 2;
+}
+
+message GetHotelsResponse {
+  repeated Hotel hotels = 1;
+}
+
+message Hotel {
+  string id = 1;
+  int64 destinationId = 2;
+  string name = 3;
+  Location location = 4;
+  string description = 5;
+  HotelAmenities amenities = 6;
+  Image images = 7;
+  repeated string booking_conditions = 8;
+}
+
+message Location {
+  double lat = 1;
+  double lng = 2;
+  string address = 3;
+  string city = 4;
+  string country = 5;
+}
+
+message HotelAmenities {
+  repeated string general = 1;
+  repeated string room = 2;
+}
+
+message Image {
+  repeated Room rooms = 1;
+  repeated Site site = 2;
+  repeated ImageAmenity amenities = 3;
+}
+
+message Room {
+  string link = 1;
+  string description = 2;
+}
+
+message Site {
+  string link = 1;
+  string description = 2;
+}
+
+message ImageAmenity {
+  string link = 1;
+  string description = 2;
+}
