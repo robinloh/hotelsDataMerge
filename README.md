@@ -3,8 +3,8 @@
 [![Go Version](https://img.shields.io/badge/Go-1.24.2-blue.svg)](https://golang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[![Test Cases](https://github.com/robinloh/hotelsDataMerge/workflows/Test%20Cases/badge.svg)](https://github.com/robin/hotelsDataMerge/actions/workflows/testing.yml)
-[![golangci-lint](https://github.com/robinloh/hotelsDataMerge/workflows/golangci-lint/badge.svg)](https://github.com/robin/hotelsDataMerge/actions/workflows/golangci-lint.yml)
+[![Test Cases](https://github.com/robinloh/hotelsDataMerge/workflows/Test%20Cases/badge.svg)](https://github.com/robinloh/hotelsDataMerge/actions/workflows/testing.yml)
+[![golangci-lint](https://github.com/robinloh/hotelsDataMerge/workflows/golangci-lint/badge.svg)](https://github.com/robinloh/hotelsDataMerge/actions/workflows/golangci-lint.yml)
 
 
 ## Summary
